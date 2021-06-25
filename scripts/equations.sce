@@ -1,21 +1,21 @@
-f=figure(); //Создание графического объекта
-set(f,'position',[0,0,500,300])
-set(f,'figure_name','EQUATIONS');//Создание меток дя полей ввода коэффициентов
+f=figure();
+set(f,'position',[0,0,500,300]);
+set(f,'figure_name','EQUATIONS');
 lab_a=uicontrol(f,'style','text','string','A=','position', [50, 250,100, 20]);
 lab_b=uicontrol(f,'style','text','string','B=','position',[150,250,100, 20]);
-lab_c=uicontrol(f,'style','text','string','C=','position',[250,250,100, 20]);// полейвводакоэффициентов
+lab_c=uicontrol(f,'style','text','string','C=','position',[250,250,100, 20]);
 edit_a=uicontrol(f,'style','edit','string','1','position',[50,230,100, 20]);
 edit_b=uicontrol(f,'style','edit','string','2','position',[150,230,100, 20]);
-edit_c=uicontrol(f,'style','edit','string','1','position',[250,230,100, 20]);//Текстовое поле, определяющее вывод результатов
-text_result=uicontrol(f,'style','text','string','','position',[50,80, 450, 20]);//Флажок, отвечающая за выбор типа уравнения
+edit_c=uicontrol(f,'style','edit','string','1','position',[250,230,100, 20]);
+text_result=uicontrol(f,'style','text','string','','position',[50,80, 450, 20]);
 radio_bikv=uicontrol('style','radiobutton','string','Биквадратное у-ие?','value',1,'position',[100,100,200,20]);
 BtSolve=uicontrol('style','pushbutton','string','Solve','Callback','Solve','position',[50,50,60,20]);
-BtClose=uicontrol('style','pushbutton','string','Close','Callback','_Close','position',[400,50,60,20]);//Функция решения уравнения
-function Solve()// Считываем значение переменных из текстовых полей и // преобразовываем их числовому типу
+BtClose=uicontrol('style','pushbutton','string','Close','Callback','_Close','position',[400,50,60,20]);
+function Solve()
     a=evstr(get(edit_a,'string'));
     b=evstr(get(edit_b,'string'));
     c=evstr(get(edit_c,'string'));
-    d=b*b-4*a*c;// Проверяем значение флажка
+    d=b*b-4*a*c;
     if get(radio_bikv,'value')==0
         if d<0
             set(text_result,'string','No Solve');
@@ -47,7 +47,7 @@ elseif (y1>=0)&(y2>=0)
                    set(text_result,'string',"x1 = "+string(x1)+" x2 = "+string(x2)); 
                end;
            end;
-   endfunction// Функция закрытия окна
+   endfunction
    function _Close()
     close(f)
    endfunction
