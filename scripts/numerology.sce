@@ -3,7 +3,7 @@ day = input("Введите день рождения: ")
 month = input("Введите номер месяца рождения: ")
 year = input("Введите год рождения: ")
 
-        switch month
+        select month
             case 1 then
                 days = 30
             case 2 then
@@ -69,7 +69,7 @@ function number = namenumber(n)
         elseif m(i) == "i" | m(i) == "r" then
             count = count + 9
         else
-            break
+            continue
         end
      end
      number = transnum(count)

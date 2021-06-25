@@ -2,7 +2,7 @@ day = input("Введите день рождения: ")
 month = input("Введите номер месяца рождения: ")
 year = input("Введите год рождения: ")
 
-        switch month
+        select month
             case 1 then
                 days = 30
             case 2 then
@@ -69,8 +69,8 @@ function s = osthoroscope(y)
             case 12 then
                 s = "monkey"
             else
-                break
-        end
+                s = "undefined value"
+            end
 endfunction
 
 function s = zodiachoroscope(n,month)
@@ -99,7 +99,7 @@ function s = zodiachoroscope(n,month)
         elseif month==2&n>19|month==3&n<21 then 
             s = "Pisces"
         else
-            break
+            s = "undefined value"
         end
 endfunction
 
@@ -129,7 +129,7 @@ function s = slavianhoroscope(n,month)
     elseif month==2&n>9|month==3&n<11 then 
         s = "raven"
         else 
-            break
+            s = "undefined value"
         end
 endfunction
 
@@ -159,7 +159,7 @@ function s = egypthoroscope(n,month)
         elseif month==7&n>28|month==8&n<12|month==10&n>29|month==11&n<8 then
             s = "Secmet"
         else 
-            break
+            s = "undefined value"
         end
 endfunction
 
