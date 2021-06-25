@@ -8,7 +8,7 @@ edit_a=uicontrol(f,'style','edit','string','1','position',[50,230,100, 20]);
 edit_b=uicontrol(f,'style','edit','string','2','position',[150,230,100, 20]);
 edit_c=uicontrol(f,'style','edit','string','1','position',[250,230,100, 20]);
 text_result=uicontrol(f,'style','text','string','','position',[50,80, 450, 20]);
-radio_bikv=uicontrol('style','radiobutton','string','Биквадратное у-ие?','value',1,'position',[100,100,200,20]);
+radio_bikv=uicontrol('style','radiobutton','string','The biquadrate equation?','value',1,'position',[100,100,200,20]);
 BtSolve=uicontrol('style','pushbutton','string','Solve','Callback','Solve','position',[50,50,60,20]);
 BtClose=uicontrol('style','pushbutton','string','Close','Callback','_Close','position',[400,50,60,20]);
 function Solve()
