@@ -163,7 +163,7 @@ function s = egypthoroscope(n,month)
         end
 endfunction
 
-disp("On the eastern horoscope:", osthoroscope(year))
+disp("On the eastern horoscope:",osthoroscope(year))
 disp("On the zodiacal horoscope:",zodiachoroscope(day,month))
 disp("On the Slavic horoscope:",slavianhoroscope(day,month))
 disp("On the Egyptian horoscope:",egypthoroscope(day,month))
