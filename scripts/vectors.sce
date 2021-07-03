@@ -22,7 +22,7 @@ M = M ./2
 n = n + 1
 end
 f1 = (F + (2 .^n))./(2 .*(2 .^n))
-v1 = V - log2(F ./(2 .*f1 - 1)) - 1
+v1 = V - n - 1
 f2 = G ./2
 v2 = V - 1
 disp(string(H)+"."+string(V)+" = "+string(f1)+"."+string(v1)+" + "+string(f2)+"."+string(v2))
